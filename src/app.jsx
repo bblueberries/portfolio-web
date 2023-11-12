@@ -2,17 +2,30 @@ import "./app.css";
 import { ThemeProvider, styled } from "@mui/system";
 import { darkTheme } from "./utils/themes";
 import { Hidden } from "@mui/material";
+import { Navbar, HeroSection, Skill, Education } from "./components/";
 const Body = styled("div")(({ theme }) => ({
-  // color: "blue",
   backgroundColor: theme.bg,
   width: "100%",
   height: "100%",
   overflowX: "hidden",
 }));
+const Wrapper = styled("div")(({ theme }) => ({
+  background:
+    "linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)",
+  width: "100%",
+  clipPath: "polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%)",
+}));
 export function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Body>Portfolio</Body>
+      <Navbar />
+      <Body>
+        <HeroSection />
+        <Wrapper>
+          <Skill />
+          <Education />
+        </Wrapper>
+      </Body>
     </ThemeProvider>
   );
 }
