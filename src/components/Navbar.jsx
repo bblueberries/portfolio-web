@@ -3,7 +3,8 @@ import { styled } from "@mui/system";
 import { NavLink as LinkR } from "react-router-dom";
 import { Link } from "react-router-dom";
 import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRounded";
-import { LaptopChromebookSharp } from "@mui/icons-material";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 const Nav = styled("div")(({ theme }) => ({
   backgroundColor: theme.card_light,
   height: "80px",
@@ -119,7 +120,39 @@ const Span = styled("span")(({ theme }) => ({
     color: theme.primary,
   },
 }));
+
+const MobileMenu = styled("div")(({ theme, open }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  gap: "16px",
+  position: "absolute",
+  top: 80,
+  right: 0,
+  width: "100%",
+  padding: "12px 40px 24px 40px",
+  background: theme.card_light + 99,
+  transition: "all 0.3s ease-in-out",
+  transform: open ? "translateX(0)" : "translateX(100%)",
+  borderRadius: "0 0 20 20px",
+  boxShadow: "0 5px 10px rgba(0,0,0,0.3)",
+  opacity: open ? "1" : "0",
+  zIndex: open ? "1" : "-1 ",
+}));
+
+const MobileMenuLink = styled("LinkR")(({ theme }) => ({
+  color: theme.text_primary,
+  fontWeight: 500,
+  cursor: "pointer",
+  transition: "all 0.2s ease-in-out",
+  "&:hover": {
+    color: theme.primary,
+  },
+}));
+
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Nav>
       <NavContainer>
@@ -136,7 +169,9 @@ const Navbar = () => {
             <Span>Portfolio</Span>
           </a>
         </NavLogo>
-        <MobileIcon></MobileIcon>
+        <MobileIcon>
+          <MenuIcon onClick={() => setOpen(!open)} />
+        </MobileIcon>
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -148,6 +183,15 @@ const Navbar = () => {
           <GithubButton>Github</GithubButton>
         </ButtonContainer>
       </NavContainer>
+      {open && (
+        <MobileMenu open={open}>
+          <MobileMenuLink>1</MobileMenuLink>
+          <MobileMenuLink>2</MobileMenuLink>
+          <MobileMenuLink>3</MobileMenuLink>
+          <MobileMenuLink>4</MobileMenuLink>
+          <MobileMenuLink>5</MobileMenuLink>
+        </MobileMenu>
+      )}
     </Nav>
   );
 };
