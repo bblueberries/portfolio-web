@@ -116,6 +116,7 @@ const GithubButton = styled("button")(({ theme }) => ({
 const Span = styled("span")(({ theme }) => ({
   marginLeft: "8px",
   transition: "all 0.2s ease-in-out",
+  fontWeight: 600,
   "&:hover": {
     color: theme.primary,
   },
@@ -140,11 +141,12 @@ const MobileMenu = styled("div")(({ theme, open }) => ({
   zIndex: open ? "1" : "-1 ",
 }));
 
-const MobileMenuLink = styled("LinkR")(({ theme }) => ({
+const MobileMenuLink = styled(LinkR)(({ theme }) => ({
   color: theme.text_primary,
   fontWeight: 500,
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
+  textDecoration: "none",
   "&:hover": {
     color: theme.primary,
   },
@@ -180,16 +182,38 @@ const Navbar = () => {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GithubButton>Github</GithubButton>
+          <GithubButton href="https://www.google.com/">Github</GithubButton>
         </ButtonContainer>
       </NavContainer>
       {open && (
         <MobileMenu open={open}>
-          <MobileMenuLink>1</MobileMenuLink>
-          <MobileMenuLink>2</MobileMenuLink>
-          <MobileMenuLink>3</MobileMenuLink>
-          <MobileMenuLink>4</MobileMenuLink>
-          <MobileMenuLink>5</MobileMenuLink>
+          <MobileMenuLink to="#about" onClick={() => setOpen(!open)}>
+            About
+          </MobileMenuLink>
+          <MobileMenuLink to="#skills" onClick={() => setOpen(!open)}>
+            Skills
+          </MobileMenuLink>
+          <MobileMenuLink to="#experience" onClick={() => setOpen(!open)}>
+            Experience
+          </MobileMenuLink>
+          <MobileMenuLink to="#projects" onClick={() => setOpen(!open)}>
+            Projects
+          </MobileMenuLink>
+          <MobileMenuLink to="#education" onClick={() => setOpen(!open)}>
+            Education
+          </MobileMenuLink>
+          <GithubButton
+            style={{
+              padding: "10px 16px",
+              background: "#4E75DC",
+              color: "white",
+              width: "max-content",
+            }}
+            href="https://www.google.com/"
+            target="_blank"
+          >
+            Github
+          </GithubButton>
         </MobileMenu>
       )}
     </Nav>
