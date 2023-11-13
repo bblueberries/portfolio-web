@@ -2,6 +2,8 @@ import React from "react";
 import { styled } from "@mui/system";
 import { NavLink as LinkR } from "react-router-dom";
 import { Link } from "react-router-dom";
+import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRounded";
+import { LaptopChromebookSharp } from "@mui/icons-material";
 const Nav = styled("div")(({ theme }) => ({
   backgroundColor: theme.card_light,
   height: "80px",
@@ -99,21 +101,41 @@ const GithubButton = styled("button")(({ theme }) => ({
   fontWeight: 500,
   cursor: "pointer",
   height: "70%",
-
-  ":hover": {
+  transition: "all 0.2s ease-in-out",
+  "&:hover": {
     backgroundColor: theme.primary,
-    color: theme.text_light,
+    color: theme.white,
   },
 
   "@media screen and (max-width: 640px)": {
     fontSize: "0.8rem",
   },
 }));
+
+const Span = styled("span")(({ theme }) => ({
+  marginLeft: "8px",
+  transition: "all 0.2s ease-in-out",
+  "&:hover": {
+    color: theme.primary,
+  },
+}));
 const Navbar = () => {
   return (
     <Nav>
       <NavContainer>
-        <NavLogo to="/">Logo</NavLogo>
+        <NavLogo to="/">
+          <a
+            style={{
+              display: "flex",
+              alignItems: "center",
+              cursor: "pointer",
+              color: "white",
+            }}
+          >
+            <LaptopChromebookRoundedIcon />
+            <Span>Portfolio</Span>
+          </a>
+        </NavLogo>
         <MobileIcon></MobileIcon>
         <NavItems>
           <NavLink href="#about">About</NavLink>
