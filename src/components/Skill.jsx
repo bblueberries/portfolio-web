@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
-import { skills } from "../constants/data";
+import { tech as techs } from "../constants/data";
 export const Container = styled("div")({
   display: "flex",
   flexDirection: "column",
@@ -28,7 +28,7 @@ export const Title = styled("div")(({ theme }) => ({
   fontSize: "42px",
   textAlign: "center",
   fontWeight: 600,
-  marginTop: "20px",
+  marginTop: "30px",
   color: theme.text_primary,
   "@media (max-width: 768px)": {
     marginTop: "12px",
@@ -51,6 +51,7 @@ export const SkillsContainer = styled("div")({
   display: "flex",
   flexWrap: "wrap",
   marginTop: "30px",
+  marginBottom: "30px",
   gap: "30px",
   justifyContent: "center",
 });
@@ -121,15 +122,15 @@ const Skills = () => {
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
-          Here are some of my skills on which I have been working on for the
-          past 2 years.
+          Here are some of technologies on which I have been learning on for the
+          past year.
         </Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
+          {techs.map((tech) => (
             <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
+              <SkillTitle>{tech.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item) => (
+                {tech.skills.map((item) => (
                   <SkillItem>
                     <SkillImage src={item.image} />
                     {item.name}
