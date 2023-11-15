@@ -131,12 +131,13 @@ const MobileMenu = styled("div")(({ theme, open }) => ({
   top: 80,
   right: 0,
   width: "100%",
+
   padding: "12px 40px 24px 40px",
-  background: theme.card_light + 99,
+  background: theme.card,
   transition: "all 0.3s ease-in-out",
   transform: open ? "translateX(0)" : "translateX(100%)",
-  borderRadius: "0 0 20 20px",
-  boxShadow: "0 5px 10px rgba(0,0,0,0.3)",
+  borderRadius: "0 0 15px 15px",
+  boxShadow: "0 5px 10px rgba(0,0,0,0.4)",
   opacity: open ? "1" : "0",
   zIndex: open ? "1" : "-1 ",
 }));
