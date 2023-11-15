@@ -17,7 +17,7 @@ const HeroContainer = styled("div")(({ theme }) => ({
   },
 
   zIndex: 1,
-  clipPath: "polygon(0 0,100% 0,100% 100%,70% 95%, 0 100%)",
+  // clipPath: "polygon(0 0,100% 0,100% 100%,70% 95%, 0 100%)",
 }));
 
 const HeroBg = styled("div")(({ theme }) => ({
