@@ -1,10 +1,18 @@
 import "./app.css";
 import { ThemeProvider, styled } from "@mui/system";
 import { darkTheme } from "./utils/themes";
-import { Hidden } from "@mui/material";
-import { Navbar, HeroSection, Skill, Education } from "./components/";
+import { useState } from "react";
+import {
+  Navbar,
+  HeroSection,
+  Skill,
+  Education,
+  Projects,
+  ProjectDetail,
+} from "./components/";
 import { BrowserRouter } from "react-router-dom";
-import Projects from "./components/Projects";
+import { Modal } from "@mui/base/Modal";
+
 const Body = styled("div")(({ theme }) => ({
   backgroundColor: theme.bg,
   width: "100%",
@@ -19,6 +27,7 @@ const Wrapper = styled("div")(({ theme }) => ({
 }));
 
 export function App() {
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
@@ -29,10 +38,13 @@ export function App() {
           <Wrapper>
             <Skill />
           </Wrapper>
-          <Projects />
+          <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
             <Education />
           </Wrapper>
+          {openModal.state && (
+            <ProjectDetail openModal={openModal} setOpenModal={setOpenModal} />
+          )}
         </Body>
       </BrowserRouter>
     </ThemeProvider>
