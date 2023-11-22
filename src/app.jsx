@@ -4,6 +4,7 @@ import { darkTheme } from "./utils/themes";
 import { Hidden } from "@mui/material";
 import { Navbar, HeroSection, Skill, Education } from "./components/";
 import { BrowserRouter } from "react-router-dom";
+import Projects from "./components/Projects";
 const Body = styled("div")(({ theme }) => ({
   backgroundColor: theme.bg,
   width: "100%",
@@ -27,6 +28,9 @@ export function App() {
           <HeroSection />
           <Wrapper>
             <Skill />
+          </Wrapper>
+          <Projects />
+          <Wrapper>
             <Education />
           </Wrapper>
         </Body>
