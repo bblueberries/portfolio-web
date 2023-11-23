@@ -29,7 +29,7 @@ export const Title = styled("div")(({ theme }) => ({
   textAlign: "center",
   fontWeight: 600,
   marginTop: "30px",
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   "@media (max-width: 768px)": {
     marginTop: "12px",
     fontSize: "32px",
@@ -40,7 +40,7 @@ export const Desc = styled("div")(({ theme }) => ({
   fontSize: "18px",
   textAlign: "center",
   maxWidth: "600px",
-  color: theme.text_secondary,
+  color: theme.palette.text.secondary,
   "@media (max-width: 768px)": {
     fontSize: "16px",
   },
@@ -59,8 +59,8 @@ export const SkillsContainer = styled("div")({
 export const Skill = styled("div")(({ theme }) => ({
   width: "100%",
   maxWidth: "500px",
-  background: theme.card,
-  border: `0.1px solid ${theme.border}`,
+  background: theme.palette.card,
+  border: `0.1px solid ${theme.palette.border}`,
   boxShadow: `rgba(23, 92, 230, 0.15) 0px 4px 24px`,
   borderRadius: "16px",
   padding: "18px 36px",
@@ -77,7 +77,7 @@ export const Skill = styled("div")(({ theme }) => ({
 export const SkillTitle = styled("h2")(({ theme }) => ({
   fontSize: "28px",
   fontWeight: 600,
-  color: theme.text_secondary,
+  color: theme.palette.text.secondary,
   marginBottom: "20px",
   textAlign: "center",
 }));
@@ -93,8 +93,8 @@ export const SkillList = styled("div")({
 export const SkillItem = styled("div")(({ theme }) => ({
   fontSize: "16px",
   fontWeight: 400,
-  color: `${theme.text_primary}80`,
-  border: `1px solid ${theme.text_primary}80`,
+  color: `${theme.palette.text.primary}80`,
+  border: `1px solid ${theme.palette.text.primary}80`,
   borderRadius: "12px",
   padding: "12px 16px",
   display: "flex",

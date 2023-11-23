@@ -4,8 +4,8 @@ const Button = styled("button")(({ theme }) => ({
   display: "none",
   width: "100%",
   padding: "10px",
-  backgroundColor: theme.white,
-  color: theme.text_black,
+  backgroundColor: theme.palette.common.white,
+  color: theme.palette.text_black,
   fontSize: "14px",
   fontWeight: 700,
   border: "none",
@@ -17,7 +17,7 @@ const Button = styled("button")(({ theme }) => ({
 const Card = styled("div")(({ theme }) => ({
   width: "330px",
   height: "490px",
-  backgroundColor: theme.card,
+  backgroundColor: theme.palette.card,
   cursor: "pointer",
   borderRadius: "10px",
   boxShadow: "0 0 12px 4px rgba(0, 0, 0, 0.4)",
@@ -40,7 +40,7 @@ const Card = styled("div")(({ theme }) => ({
 const Image = styled("img")(({ theme }) => ({
   width: "100%",
   height: "180px",
-  backgroundColor: theme.white,
+  backgroundColor: theme.palette.common.white,
   borderRadius: "10px",
   boxShadow: "0 0 16px 2px rgba(0, 0, 0, 0.3)",
 }));
@@ -57,8 +57,8 @@ const Tags = styled("div")({
 const Tag = styled("span")(({ theme }) => ({
   fontSize: "12px",
   fontWeight: 400,
-  color: theme.primary,
-  backgroundColor: theme.primary + 15,
+  color: theme.palette.primary.main,
+  backgroundColor: theme.palette.primary.main + 15,
   padding: "2px 8px",
   borderRadius: "10px",
 }));
@@ -74,7 +74,7 @@ const Details = styled("div")({
 const Title = styled("div")(({ theme }) => ({
   fontSize: "20px",
   fontWeight: 600,
-  color: theme.text_secondary,
+  color: theme.palette.text.secondary,
   overflow: "hidden",
   display: "-webkit-box",
   maxWidth: "100%",
@@ -87,7 +87,7 @@ const Date = styled("div")(({ theme }) => ({
   fontSize: "12px",
   marginLeft: "2px",
   fontWeight: 400,
-  color: theme.text_secondary + 80,
+  color: theme.palette.text.secondary + 80,
   "@media only screen and (max-width: 768px)": {
     fontSize: "10px",
   },
@@ -95,7 +95,7 @@ const Date = styled("div")(({ theme }) => ({
 
 const Description = styled("div")(({ theme }) => ({
   fontWeight: 400,
-  color: theme.text_secondary + 99,
+  color: theme.palette.text.secondary + 99,
   overflow: "hidden",
   marginTop: "8px",
   display: "-webkit-box",

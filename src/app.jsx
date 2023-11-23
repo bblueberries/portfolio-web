@@ -10,11 +10,12 @@ import {
   Projects,
   ProjectDetail,
 } from "./components/";
+import BasicModal from "./components/testModal";
 import { BrowserRouter } from "react-router-dom";
 import { Modal } from "@mui/base/Modal";
 
 const Body = styled("div")(({ theme }) => ({
-  backgroundColor: theme.bg,
+  backgroundColor: theme.palette.background.default,
   width: "100%",
   height: "100%",
   overflowX: "hidden",
@@ -45,6 +46,7 @@ export function App() {
           {openModal.state && (
             <ProjectDetail openModal={openModal} setOpenModal={setOpenModal} />
           )}
+          <BasicModal />
         </Body>
       </BrowserRouter>
     </ThemeProvider>

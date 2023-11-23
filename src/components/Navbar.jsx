@@ -6,7 +6,7 @@ import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRou
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 const Nav = styled("div")(({ theme }) => ({
-  backgroundColor: theme.card_light,
+  backgroundColor: theme.palette.card_light,
   height: "80px",
   display: "flex",
   justifyContent: "center",
@@ -53,7 +53,7 @@ const MobileIcon = styled("div")(({ theme }) => ({
     transform: "translate(-100%, 50%)",
     fontSize: "1.5rem",
     cursor: "pointer",
-    color: theme.text_primary,
+    color: theme.palette.text.primary,
   },
 }));
 
@@ -70,13 +70,13 @@ const NavItems = styled("ul")(({ theme }) => ({
 }));
 
 const NavLink = styled("a")(({ theme }) => ({
-  color: theme.text_primary,
+  color: theme.palette.common.white,
   fontWeight: "500",
   cursor: "pointer",
   textDecoration: "none",
   transition: "all 0.2s ease-in-out",
   "&:hover": {
-    color: theme.primary,
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -92,7 +92,7 @@ const ButtonContainer = styled("div")({
   },
 });
 const GithubButton = styled("button")(({ theme }) => ({
-  border: `1.8px solid ${theme.primary}`,
+  border: `1.8px solid ${theme.palette.primary.main}`,
   borderRadius: "20px",
   display: "flex",
   justifyContent: "center",
@@ -104,8 +104,8 @@ const GithubButton = styled("button")(({ theme }) => ({
   height: "70%",
   transition: "all 0.2s ease-in-out",
   "&:hover": {
-    backgroundColor: theme.primary,
-    color: theme.white,
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
   },
 
   "@media screen and (max-width: 640px)": {
@@ -118,7 +118,7 @@ const Span = styled("span")(({ theme }) => ({
   transition: "all 0.2s ease-in-out",
   fontWeight: 600,
   "&:hover": {
-    color: theme.primary,
+    color: theme.palette.primary.main,
   },
 }));
 
@@ -133,7 +133,7 @@ const MobileMenu = styled("div")(({ theme, open }) => ({
   width: "100%",
 
   padding: "12px 40px 24px 40px",
-  background: theme.card,
+  background: theme.palette.card,
   transition: "all 0.3s ease-in-out",
   transform: open ? "translateX(0)" : "translateX(100%)",
   borderRadius: "0 0 15px 15px",
@@ -143,13 +143,13 @@ const MobileMenu = styled("div")(({ theme, open }) => ({
 }));
 
 const MobileMenuLink = styled(LinkR)(({ theme }) => ({
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   fontWeight: 500,
   cursor: "pointer",
   transition: "all 0.2s ease-in-out",
   textDecoration: "none",
   "&:hover": {
-    color: theme.primary,
+    color: theme.palette.primary.main,
   },
 }));
 

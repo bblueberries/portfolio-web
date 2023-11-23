@@ -2,7 +2,7 @@ import { styled } from "@mui/system";
 import React from "react";
 import { Bio } from "../constants/data";
 const HeroContainer = styled("div")(({ theme }) => ({
-  backgroundColor: theme.card_light,
+  backgroundColor: theme.palette.card_light,
   display: "flex",
   justifyContent: "center",
   position: "relative",
@@ -73,7 +73,7 @@ const HeroLeftContainer = styled("div")({
 const Title = styled("div")(({ theme }) => ({
   fontWeight: "700",
   fontSize: "50px",
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   lineHeight: "68px",
 
   "@media (max-width: 960px)": {
@@ -92,7 +92,7 @@ const TextHighlight = styled("div")(({ theme }) => ({
   fontSize: "32px",
   display: "flex",
   gap: "12px",
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   lineHeight: "68px",
 
   "@media (max-width: 960px)": {
@@ -107,7 +107,7 @@ const TextHighlight = styled("div")(({ theme }) => ({
 }));
 
 const Span = styled("span")(({ theme }) => ({
-  color: theme.primary,
+  color: theme.palette.primary.main,
   cursor: "pointer",
 }));
 
@@ -115,7 +115,7 @@ const SubTitle = styled("div")(({ theme }) => ({
   fontSize: "20px",
   lineHeight: "32px",
   marginBottom: "42px",
-  color: theme.text_primary + 95,
+  color: theme.palette.text.primary + 95,
 
   "@media (max-width: 960px)": {
     textAlign: "center",
@@ -128,7 +128,7 @@ const SubTitle = styled("div")(({ theme }) => ({
 }));
 
 const ResumeButton = styled("button")(({ theme }) => ({
-  border: `1.8px solid ${theme.primary}`,
+  border: `1.8px solid ${theme.palette.primary.main}`,
   borderRadius: "20px",
   display: "flex",
   justifyContent: "center",
@@ -143,8 +143,8 @@ const ResumeButton = styled("button")(({ theme }) => ({
 
   transition: "all 0.2s ease-in-out",
   "&:hover": {
-    backgroundColor: theme.primary,
-    color: theme.white,
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
   },
 
   "@media screen and (max-width: 640px)": {

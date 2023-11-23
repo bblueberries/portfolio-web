@@ -23,8 +23,8 @@ const Wrapper = styled("div")(({ theme }) => ({
   borderRadius: "16px",
   margin: "50px 12px",
   height: "min-content",
-  backgroundColor: theme.card,
-  color: theme.text_primary,
+  backgroundColor: theme.palette.card,
+  color: theme.palette.text.primary,
   padding: "20px",
   display: "flex",
   flexDirection: "column",
@@ -34,7 +34,7 @@ const Wrapper = styled("div")(({ theme }) => ({
 const Title = styled("div")(({ theme }) => ({
   fontSize: "28px",
   fontWeight: 600,
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   margin: "8px 6px 0px 6px",
   "@media only screen and (max-width: 600px)": {
     fontSize: "24px",
@@ -46,7 +46,7 @@ const Date = styled("div")(({ theme }) => ({
   fontSize: "16px",
   margin: "2px 6px",
   fontWeight: 400,
-  color: theme.text_secondary,
+  color: theme.palette.text.secondary,
   "@media only screen and (max-width: 768px)": {
     fontSize: "12px",
   },
@@ -55,7 +55,7 @@ const Date = styled("div")(({ theme }) => ({
 const Desc = styled("div")(({ theme }) => ({
   fontSize: "16px",
   fontWeight: 400,
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   margin: "8px 6px",
   "@media only screen and (max-width: 600px)": {
     fontSize: "14px",
@@ -74,7 +74,7 @@ const Image = styled("img")({
 const Label = styled("div")(({ theme }) => ({
   fontSize: "20px",
   fontWeight: 600,
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   margin: "8px 6px",
   "@media only screen and (max-width: 600px)": {
     fontSize: "16px",
@@ -94,11 +94,11 @@ const Tags = styled("div")({
 const Tag = styled("div")(({ theme }) => ({
   fontSize: "14px",
   fontWeight: 400,
-  color: theme.primary,
+  color: theme.palette.primary.main,
   margin: "4px",
   padding: "4px 8px",
   borderRadius: "8px",
-  backgroundColor: theme.primary + 20,
+  backgroundColor: theme.palette.primary.main + 20,
   "@media only screen and (max-width: 600px)": {
     fontSize: "12px",
   },
@@ -116,15 +116,15 @@ const Button = styled("a")(({ theme }) => ({
   textAlign: "center",
   fontSize: "16px",
   fontWeight: 600,
-  color: theme.text_primary,
+  color: theme.palette.text.primary,
   padding: "12px 16px",
   borderRadius: "8px",
-  backgroundColor: theme.primary,
+  backgroundColor: theme.palette.primary.main,
   cursor: "pointer",
   textDecoration: "none",
   transition: "all 0.5s ease",
   "&:hover": {
-    backgroundColor: theme.primary + 99,
+    backgroundColor: theme.palette.primary.main + 99,
   },
   "@media only screen and (max-width: 600px)": {
     fontSize: "12px",

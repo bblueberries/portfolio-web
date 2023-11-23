@@ -38,7 +38,7 @@ const Projects = ({ openModal, setOpenModal }) => {
     textAlign: "center",
     fontWeight: 600,
     marginTop: "20px",
-    color: theme.text_primary,
+    color: theme.palette.text.primary,
     "@media (max-width: 768px)": {
       marginTop: "12px",
       fontSize: "32px",
@@ -49,7 +49,7 @@ const Projects = ({ openModal, setOpenModal }) => {
     fontSize: "18px",
     textAlign: "center",
     maxWidth: "600px",
-    color: theme.text_secondary,
+    color: theme.palette.text.secondary,
     "@media (max-width: 768px)": {
       marginTop: "12px",
       fontSize: "16px",
@@ -59,8 +59,8 @@ const Projects = ({ openModal, setOpenModal }) => {
   const ToggleButtonGroup = styled("div")(({ theme }) => ({
     display: "flex",
     border: "1.5px solid",
-    borderColor: theme.primary,
-    color: theme.primary,
+    borderColor: theme.palette.primary.main,
+    color: theme.palette.primary.main,
     fontSize: "16px",
     borderRadius: "12px",
     fontWeight: 500,
@@ -75,9 +75,9 @@ const Projects = ({ openModal, setOpenModal }) => {
     borderRadius: "6px",
     cursor: "pointer",
     backgroundColor: ({ active }) =>
-      active ? theme.primary + 20 : "transparent",
+      active ? theme.palette.primary.main + 20 : "transparent",
     "&:hover": {
-      background: theme.primary + 8,
+      background: theme.palette.primary.main + 8,
     },
     "@media (max-width: 768px)": {
       padding: "6px 8px",
@@ -87,7 +87,7 @@ const Projects = ({ openModal, setOpenModal }) => {
 
   const Divider = styled("div")(({ theme }) => ({
     width: "1.5px",
-    background: theme.primary,
+    background: theme.palette.primary.main,
   }));
 
   const CardContainer = styled("div")({
