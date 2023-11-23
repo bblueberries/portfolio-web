@@ -134,6 +134,7 @@ const ResumeButton = styled("button")(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   padding: "10px 16px",
+  margin: "3rem",
   fontSize: "20px",
   fontWeight: 600,
   cursor: "pointer",

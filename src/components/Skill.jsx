@@ -51,7 +51,7 @@ export const SkillsContainer = styled("div")({
   display: "flex",
   flexWrap: "wrap",
   marginTop: "30px",
-  marginBottom: "30px",
+  marginBottom: "5rem",
   gap: "30px",
   justifyContent: "center",
 });
