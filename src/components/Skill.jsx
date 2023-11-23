@@ -121,7 +121,7 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>
+        <Desc sx={{ padding: "1rem" }}>
           Here are some of technologies on which I have been learning on for the
           past year.
         </Desc>
