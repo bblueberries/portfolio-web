@@ -1,5 +1,5 @@
 import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
-import { Modal } from "@mui/base/Modal";
+import { Modal } from "@mui/material";
 import React from "react";
 import { styled } from "@mui/system";
 
@@ -137,7 +137,7 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
     <Modal
       open={true}
       onClose={() => setOpenModal({ state: false, project: null })}
-      style={{ zIndex: 1 }}
+      //   style={{ zIndex: 1 }}
     >
       {
         <Container>

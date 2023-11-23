@@ -46,7 +46,7 @@ export function App() {
           {openModal.state && (
             <ProjectDetail openModal={openModal} setOpenModal={setOpenModal} />
           )}
-          <BasicModal />
+          {/* <BasicModal /> */}
         </Body>
       </BrowserRouter>
     </ThemeProvider>
