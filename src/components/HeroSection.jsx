@@ -167,7 +167,10 @@ const HeroSection = () => {
               I am a <Span>Software Developer</Span>
             </TextHighlight>
             <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="_blank  ">
+            <ResumeButton
+              onClick={() => window.open(Bio.resume)}
+              target="_blank  "
+            >
               Resume
             </ResumeButton>
           </HeroLeftContainer>
