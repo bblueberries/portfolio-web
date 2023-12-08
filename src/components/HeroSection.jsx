@@ -164,7 +164,7 @@ const HeroSection = () => {
               Hi, I am <br /> {Bio.name}
             </Title>
             <TextHighlight>
-              I am a <Span>FullStack Developer</Span>
+              I am a <Span>Software Developer</Span>
             </TextHighlight>
             <SubTitle>{Bio.description}</SubTitle>
             <ResumeButton href={Bio.resume} target="_blank  ">

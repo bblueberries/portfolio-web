@@ -182,7 +182,11 @@ const Navbar = () => {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GithubButton href="https://www.google.com/">Github</GithubButton>
+          <GithubButton
+            onClick={() => window.open("https://github.com/bblueberries")}
+          >
+            Github
+          </GithubButton>
         </ButtonContainer>
       </NavContainer>
       {open && (
@@ -207,7 +211,7 @@ const Navbar = () => {
               color: "white",
               width: "max-content",
             }}
-            href="https://www.google.com/"
+            onClick={() => window.open("https://github.com/bblueberries")}
             target="_blank"
           >
             Github

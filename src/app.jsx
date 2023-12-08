@@ -40,9 +40,7 @@ export function App() {
             <Skill />
           </Wrapper>
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-          </Wrapper>
+
           {openModal.state && (
             <ProjectDetail openModal={openModal} setOpenModal={setOpenModal} />
           )}
