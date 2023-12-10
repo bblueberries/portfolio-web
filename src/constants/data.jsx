@@ -10,8 +10,7 @@ export const Bio = {
   description:
     "I am Atsawin Sungsuwan, majoring in Computer Engineering, Chulalongkorn University. ",
   github: "https://github.com/rishavchanda",
-  resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+  resume: "https://resumette-bblueberries.vercel.app",
 };
 
 export const tech = [
