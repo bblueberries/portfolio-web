@@ -173,7 +173,7 @@ export const projects = [
     title: "The ghost buster",
 
     description:
-      "a 2D game project that we have to tag the ghosts to make them disappear inspired by a tag game",
+      "a 2D game project that we have to tag the ghosts to make them disappear inspired by a tag game and Pac-man",
     image: javagamePreview,
     tags: ["Java", "JavaFX"],
 
